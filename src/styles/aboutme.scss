@@ -14,6 +14,9 @@ section {
     }
     .Aboutme__info {
         @include Box;
+        opacity: 0;
+        transform: scale(0.6);
+        transition: .7s ease-in-out all;
         img {
             width: 40%;
             margin-top: 8px;
@@ -26,10 +29,14 @@ section {
             line-height: 1.3rem;
         }
     }
+
     .Aboutme__skills { 
         @include Box;
         height: 140px;
         position: relative;
+        transform: translateX(50px);
+        opacity: 0;
+        transition: 4s ease-in-out all;
         margin-bottom: 40px;
         div {
             margin-top: 20px;
@@ -44,6 +51,11 @@ section {
             }
 
         }
+    }
+
+    .visible {
+        opacity: 1;
+        transform: scale(1) translateX(0);
     }
     span > .hover--title {
         position: absolute;
@@ -146,4 +158,11 @@ section {
 }
 
 
-
+@keyframes upToDown {
+    0%{
+        width: 0;
+    }
+    100% {
+        width: 90%;
+    }
+}

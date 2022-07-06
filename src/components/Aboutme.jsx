@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si';
 import { ImGit } from 'react-icons/im';
 import { TbBrandNextjs } from 'react-icons/tb';
@@ -6,10 +6,33 @@ import img from '../assets/images/Mask group.png';
 import '../styles/aboutme.scss';
 
 const Aboutme = () => {
+  const sectionInfo = useRef(null);
+  const sectionSkill = useRef(null);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    },
+    {
+      threshold: 0.5
+    }
+  );
+
+  useEffect(() => {
+    observer.observe(sectionInfo.current);
+    observer.observe(sectionSkill.current);
+  }, []);
+
   return (
     <section>
       <h2>Sobre mí</h2>
-      <div className="Aboutme__info">
+      <div ref={sectionInfo} className="Aboutme__info">
         <img src={img} alt="Foto de Luciano Gimenez" />
         <article>
           Me llamo Luciano Gimenez, soy de Buenos Aires , Argentina, me gusta
@@ -19,7 +42,7 @@ const Aboutme = () => {
         </article>
       </div>
       <h2>Skills</h2>
-      <div className="Aboutme__skills">
+      <div className="Aboutme__skills" ref={sectionSkill}>
         <div className="Icon_container">
           <span>
             <SiJavascript className="Icon-js item" />
