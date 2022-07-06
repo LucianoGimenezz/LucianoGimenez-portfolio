@@ -1,0 +1,71 @@
+@import'./vars';
+
+.Hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    &__content{
+        width: 90%;
+        margin: 0 auto;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 2.1rem;
+        overflow: hidden;
+
+    }
+    &__content > p {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 45ch;
+        animation: typing 2s steps(45);
+        transition: animation;
+    }
+    &__content > p:nth-child(2) {
+        animation: type2 3s steps(45);
+    }
+    &__content > p:nth-child(3) {
+        animation: type2 4s steps(45);
+        color: $secondaryColor;
+    }
+    &__content > p:nth-child(4) {
+        animation: type2 6s steps(45);
+    }
+    &__content > p:nth-child(5) {
+        animation: type2 8s steps(45);
+        color: $secondaryColor;
+    }
+    &__content > p > span {
+        animation: blink 1s infinite;
+        color: #fff;
+    }
+    &__button {
+        width: 50%;
+        max-width: 200px;
+        margin: 0 auto;
+        height: 3rem;
+        border: none;
+        border-radius: 10px;
+        background-color: $buttonColor;
+        font-size: 1rem;
+    }
+}
+
+@keyframes typing {
+    from{ width: 0}
+}
+
+@keyframes type2{
+    0%{width: 0;}
+    50%{width: 0;}
+    100%{ width: 100; } 
+  } 
+  
+  @keyframes blink{
+    to{opacity: .0;}
+  }

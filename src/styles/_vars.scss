@@ -1,0 +1,13 @@
+$secondaryColor:#FF9F29;
+$buttonColor:#FAF3E3;
+
+@mixin Box {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color:$secondaryColor;
+}
