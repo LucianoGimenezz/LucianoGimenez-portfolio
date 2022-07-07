@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/hero.scss';
 import Aboutme from './Aboutme';
+import Contacto from './Contacto';
 import Header from './Header';
 import Menu from './Menu';
 import Proyectos from './Proyectos';
@@ -26,6 +27,7 @@ const App = () => {
       </section>
       <Aboutme />
       <Proyectos />
+      <Contacto />
     </>
   );
 };

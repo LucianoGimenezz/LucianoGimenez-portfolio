@@ -20,7 +20,7 @@ const Menu = ({ modal, setOpenModal }) => {
           <a href="#proyectos">Proyectos</a>
         </li>
         <li>
-          <a href="#contact">Contacto</a>
+          <a href="#contacto">Contacto</a>
         </li>
       </ul>
     </div>,
