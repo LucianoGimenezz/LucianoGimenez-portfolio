@@ -30,7 +30,7 @@ const Aboutme = () => {
   }, []);
 
   return (
-    <section>
+    <section id="aboutme">
       <h2>Sobre mí</h2>
       <div ref={sectionInfo} className="Aboutme__info">
         <img src={img} alt="Foto de Luciano Gimenez" />

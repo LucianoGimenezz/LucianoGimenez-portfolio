@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/hero.scss';
 import Aboutme from './Aboutme';
 import Header from './Header';
+import Menu from './Menu';
 import Proyectos from './Proyectos';
 
 const App = () => {
+  const [modal, setOpenModal] = useState(false);
+
   return (
     <>
-      <Header />
-      <section className="Hero">
+      <Header modal={modal} setOpenModal={setOpenModal} />
+      {modal && <Menu modal={modal} setOpenModal={setOpenModal} />}
+      <section id="home" className="Hero">
         <div className="Hero__content">
           <p>Hola,</p>
           <p>soy</p>

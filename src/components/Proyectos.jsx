@@ -30,7 +30,7 @@ const Proyectos = () => {
   }, []);
 
   return (
-    <section className="Proyectos">
+    <section id="proyectos" className="Proyectos">
       <h2>Proyectos</h2>
       <div className="Proyectos__container">
         <div className="Proyectos__items">
