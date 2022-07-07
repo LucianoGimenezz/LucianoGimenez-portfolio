@@ -5,6 +5,7 @@ section {
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     h2 {
         font-size: 3rem;
         font-weight:  bold;
@@ -36,7 +37,7 @@ section {
         position: relative;
         transform: translateX(50px);
         opacity: 0;
-        transition: 4s ease-in-out all;
+        transition: 1s ease-in-out all;
         margin-bottom: 40px;
         div {
             margin-top: 20px;

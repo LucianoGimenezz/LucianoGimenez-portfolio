@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/hero.scss';
 import Aboutme from './Aboutme';
 import Header from './Header';
+import Proyectos from './Proyectos';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <button className="Hero__button">Contáctame!</button>
       </section>
       <Aboutme />
+      <Proyectos />
     </>
   );
 };
