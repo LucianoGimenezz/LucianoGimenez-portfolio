@@ -21,6 +21,32 @@ header {
     span {
         font-size: 2rem;
     }
+    menu {
+        width: 50%;
+        height: 100%;
+        max-width: 458px;
+        display: none;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: #fff;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+    }
+}
+
+@media (min-width: 800px) {
+    header > ul > span {
+        display: none;
+    }
+    header > ul > menu {
+        display: flex;
     }
 }
 

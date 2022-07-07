@@ -7,9 +7,13 @@
     padding-bottom: 30px;
     &__container {
         width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
         display: grid;
         align-items: center;
-        grid-template-columns: repeat(auto-fill,minmax(1fr, 250px));
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
         gap: 20px;
 
     }
@@ -23,6 +27,7 @@
         justify-content: space-around;
         align-items: center;
         width: 90%;
+        max-width: 320px;
         height: 300px;
         background-color: $secondaryColor;
         p{

@@ -34,7 +34,7 @@ const Contacto = () => {
 
         <div className="item5">
           <textarea
-            spellChec="true"
+            spellCheck="true"
             required
             name="mensaje"
             cols="30"
@@ -44,7 +44,9 @@ const Contacto = () => {
             Mensaje<span>*</span>
           </label>
         </div>
-        <button>Enviar</button>
+        <div className="item6">
+          <button>Enviar</button>
+        </div>
       </form>
     </section>
   );
