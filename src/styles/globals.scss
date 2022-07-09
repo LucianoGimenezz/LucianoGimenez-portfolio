@@ -1,3 +1,5 @@
+@import './vars';
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -13,9 +15,32 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: $secondaryColor;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(230, 184, 115);
+  }  
+
 #vanta {
     z-index: 0;
     position: absolute;
+    overflow: hidden;
     left: 0;
     right: 0;
     top: 0;

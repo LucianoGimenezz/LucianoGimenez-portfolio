@@ -1,3 +1,5 @@
+@import './vars';
+
 header {
     width: 100%;
     height: 60px;
@@ -10,6 +12,7 @@ header {
     -webkit-backdrop-filter: blur(40px) saturate(260%);
     ul {
         width: 90%;
+        max-width: 1000px;
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -24,10 +27,42 @@ header {
     menu {
         width: 50%;
         height: 100%;
+        position: relative;
         max-width: 458px;
         display: none;
         align-items: center;
         justify-content: space-evenly;
+        div {
+            position: absolute;
+            opacity: 0;
+            width: 42px;
+            background-color: $secondaryColor;
+            bottom: 0;
+            padding: 2px;
+            transition: 0.4s;
+            border-radius: 1px;
+        }
+        li:hover + div {
+            opacity: 1;
+        }
+        
+        .ruleHome {
+            left: 22px;
+        }
+
+        
+        .ruleAbout {
+            left: calc(38% - 48px);
+            width: 64px;
+        }
+        .ruleProyect {
+            left: 49%;
+            width: 74px;
+        }
+        .ruleContact {
+            right: 20px;
+            width: 70px;
+        }
         li {
             list-style: none;
             a{
@@ -50,3 +85,36 @@ header {
     }
 }
 
+@media (min-width: 840px) {
+   header > ul > menu > .ruleHome {
+        left: 28px;
+    }
+
+    header > ul > menu > .ruleContact {
+        right: 24px;
+    }
+}
+
+@media (min-width: 920px) {
+    header > ul > menu > .ruleHome {
+        left: 34px;
+    }
+
+    header > ul > menu > .ruleContact {
+        right: 30px;
+    }
+
+    header > ul > menu > .ruleProyect {
+        left: calc(51% - 2px);
+    }
+}
+
+@media (min-width: 990px) {
+    header > ul > menu > .ruleHome {
+        left: 42px;
+    }
+
+    header > ul > menu > .ruleContact {
+        right: 36px;
+    }
+}

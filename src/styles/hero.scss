@@ -100,3 +100,9 @@ footer > div > span {
   @keyframes blink{
     to{opacity: .0;}
   }
+
+  @media (min-width: 700px) {
+     .Hero > div > p {
+        font-size: 3rem;
+     }
+  }

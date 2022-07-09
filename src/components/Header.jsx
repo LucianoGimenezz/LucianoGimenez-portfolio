@@ -14,15 +14,19 @@ const Header = ({ modal, setOpenModal }) => {
           <li>
             <a href="#home">Home</a>
           </li>
+          <div className="ruleHome"></div>
           <li>
             <a href="#aboutme">Sobre mí</a>
           </li>
+          <div className="ruleAbout"></div>
           <li>
             <a href="#proyectos">Proyectos</a>
           </li>
+          <div className="ruleProyect"></div>
           <li>
             <a href="#contacto">Contacto</a>
           </li>
+          <div className="ruleContact"></div>
         </menu>
       </ul>
     </header>

@@ -20,7 +20,6 @@ const App = () => {
       setTimeout(() => {
         if (document.documentElement.scrollTop > 0) {
           document.documentElement.scrollTo(0, 0);
-          console.log('Up');
         }
       }, 1000);
     });

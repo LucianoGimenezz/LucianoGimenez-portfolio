@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../styles/contacto.scss';
 
 const Contacto = () => {
+  const form = useRef(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(form.current);
+  };
+
   return (
     <section id="contacto" className="Contacto">
       <h2>Contacto</h2>
-      <form>
+      <form
+        action="https://formsubmit.co/luciano.gimenezz21@gmail.com"
+        method="POST"
+      >
         <div className="item1">
           <input type="text" required name="name" />
           <label>
@@ -45,8 +55,14 @@ const Contacto = () => {
           </label>
         </div>
         <div className="item6">
-          <button>Enviar</button>
+          <button type="submit">Enviar</button>
         </div>
+        <input
+          type="hidden"
+          name="_next"
+          value="http://localhost:8080/#contacto"
+        />
+        <input type="hidden" name="_captcha" value="false" />
       </form>
     </section>
   );
