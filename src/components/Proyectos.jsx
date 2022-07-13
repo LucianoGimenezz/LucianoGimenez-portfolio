@@ -96,7 +96,7 @@ const Proyectos = () => {
           </div>
         </div>
 
-        <div className="Proyectos__items">
+        {/* <div className="Proyectos__items">
           <img />
           <div className="button__container">
             <a className="codigo">Codigo</a>
@@ -109,7 +109,7 @@ const Proyectos = () => {
             <a className="codigo">Codigo</a>
             <a className="deploy">Deploy</a>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -1,21 +1,74 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import '../styles/contacto.scss';
+import { AiOutlineCheckCircle } from 'react-icons/ai';
 
 const Contacto = () => {
   const form = useRef(null);
 
-  const handleSubmit = (e) => {
+  const [state, setState] = useState({
+    submitting: false,
+    success: false,
+    error: false
+  });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(form.current);
+
+    setState({
+      ...state,
+      submitting: true
+    });
+
+    const response = await fetch('https://formspree.io/f/xayvgdze', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json'
+      }
+    });
+    setState({
+      ...state,
+      submitting: false
+    });
+
+    if (response.ok) {
+      setState({
+        ...state,
+        success: true
+      });
+
+      form.current.reset();
+      setTimeout(() => {
+        setState({
+          ...state,
+          success: false
+        });
+      }, 2000);
+    } else {
+      setState({
+        ...state,
+        error: true
+      });
+      form.current.reset();
+    }
   };
 
   return (
     <section id="contacto" className="Contacto">
       <h2>Contacto</h2>
-      <form
-        action="https://formsubmit.co/luciano.gimenezz21@gmail.com"
-        method="POST"
-      >
+      {state.success && (
+        <div className="MailSuccess">
+          <p>
+            Mail Enviado{' '}
+            <span>
+              {' '}
+              <AiOutlineCheckCircle />{' '}
+            </span>
+          </p>
+        </div>
+      )}
+      <form ref={form} onSubmit={handleSubmit}>
         <div className="item1">
           <input type="text" required name="name" />
           <label>
@@ -55,14 +108,16 @@ const Contacto = () => {
           </label>
         </div>
         <div className="item6">
-          <button type="submit">Enviar</button>
+          <button
+            className={`${state.submitting && 'btnLoading'}`}
+            type="submit"
+            disabled={state.submitting}
+          >
+            {state.submitting && <div className="spinner"></div>}
+
+            {!state.submitting && 'Enviar'}
+          </button>
         </div>
-        <input
-          type="hidden"
-          name="_next"
-          value="http://localhost:8080/#contacto"
-        />
-        <input type="hidden" name="_captcha" value="false" />
       </form>
     </section>
   );
