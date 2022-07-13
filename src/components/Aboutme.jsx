@@ -38,8 +38,8 @@ const Aboutme = () => {
           <article>
             Me llamo Luciano Gimenez, soy de Buenos Aires , Argentina, me gusta
             todo lo relacionado a la programación y hacer deporte. Estoy
-            estudiando la carrera de Lic.en Sistemas en la Universidad de la
-            plata, y de forma autodidacta todo lo relacionado al Front-end.
+            estudiando la carrera de Lic.en Sistemas en la Universidad de La
+            Plata, y de forma autodidacta todo lo relacionado al Front-end.
           </article>
         </div>
       </div>
