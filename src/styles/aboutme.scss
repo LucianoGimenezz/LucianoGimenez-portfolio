@@ -65,7 +65,7 @@ section {
         font-size: 0.7rem !important;
         right: calc(40%);
         border-radius: 30px;
-        padding: 4px;
+        padding: 6px;
         text-align: center;
         color: #000;
         background-color: #fff;
@@ -77,9 +77,9 @@ section {
     span > .hover--title::before{
         content: '';
         width: 12px;
-        height: 12px;
+        height: 10px;
         position: absolute;
-        top: -2px;
+        top: -4px;
         left: 10px;
         transform: rotate(-40deg) translateX(20%);
         background-color: #fff;
@@ -100,7 +100,7 @@ section {
     }
     span > .css {
         right: calc(25%);
-        width: 30px;
+        padding-right: 8px;
         padding-top: 8px;
     }
     span > .Icon-css:hover {
@@ -141,8 +141,8 @@ section {
    }
 
    span > .git {
-    padding: 4px 6px;
-    padding-right: 8px;
+    padding-top: 6px;
+    padding-right: 12px;
    }
 
    span > .Icon-git:hover {

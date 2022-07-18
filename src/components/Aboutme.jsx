@@ -72,7 +72,7 @@ const Aboutme = () => {
             </span>
             <span>
               <TbBrandNextjs className="Icon-next item" />
-              <span className="hover--title down next">NextJS</span>
+              <span className="hover--title down next">Next</span>
             </span>
           </div>
         </div>
