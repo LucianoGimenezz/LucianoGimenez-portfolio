@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si';
 import { ImGit } from 'react-icons/im';
 import { TbBrandNextjs } from 'react-icons/tb';
-import img from '../assets/images/Mask group.png';
+import img from '../assets/images/Maskgroup.png';
 import '../styles/aboutme.scss';
 
 const Aboutme = () => {
@@ -14,6 +14,7 @@ const Aboutme = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          document.querySelector('img').src = img;
         } else {
           entry.target.classList.remove('visible');
         }
@@ -34,7 +35,7 @@ const Aboutme = () => {
       <div>
         <h2>Sobre mí</h2>
         <div ref={sectionInfo} className="Aboutme__info">
-          <img src={img} alt="Foto de Luciano Gimenez" />
+          <img src="" alt="Foto de Luciano Gimenez" />
           <article>
             Me llamo Luciano Gimenez, soy de Buenos Aires , Argentina, me gusta
             todo lo relacionado a la programación y hacer deporte. Estoy

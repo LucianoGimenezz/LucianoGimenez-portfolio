@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlMinizimerPlugin = require('html-minimizer-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -53,6 +54,10 @@ module.exports = {
       filename: '[name][hash].css'
     })
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new HtmlMinizimerPlugin()]
+  },
   devServer: {
     static: path.join(__dirname, 'dist'),
     compress: true,
