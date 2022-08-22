@@ -2,6 +2,21 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlMinizimerPlugin = require('html-minimizer-webpack-plugin');
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const shouldAnalyze = process.argv.includes('--analyze');
+
+const plugins = [
+  new HtmlWebpackPlugin({
+    template: './public/index.html',
+    filename: './index.html'
+  }),
+  new MiniCssExtractPlugin({
+    filename: '[name][hash].css'
+  })
+];
+
+if (shouldAnalyze) plugins.push(new BundleAnalyzerPlugin());
 
 module.exports = {
   entry: './src/index.js',
@@ -45,15 +60,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: './index.html'
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name][hash].css'
-    })
-  ],
+  plugins,
   optimization: {
     minimize: true,
     minimizer: [new HtmlMinizimerPlugin()]

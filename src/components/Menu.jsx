@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createPortal } from 'react-dom';
 import '../styles/menuModal.scss';
 import { AiOutlineClose } from 'react-icons/ai';
 
 const Menu = ({ modal, setOpenModal }) => {
-  return ReactDOM.createPortal(
+  return createPortal(
     <div className="Menu">
       <span onClick={() => setOpenModal(!modal)}>
         <AiOutlineClose className="Icon" />
