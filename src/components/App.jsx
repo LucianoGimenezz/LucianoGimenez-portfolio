@@ -66,7 +66,7 @@ const App = () => {
           <span>
             <AiOutlineCopyrightCircle />
           </span>
-          <p>Luciano Gimenez 2022</p>
+          <p>Luciano Gimenez 2023</p>
         </div>
       </footer>
     </>
