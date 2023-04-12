@@ -38,7 +38,7 @@ const App = () => {
           <p>Luciano Gimenez</p>
           <p>Desarrollador</p>
           <p>
-            Front-end <span>|</span>
+            Full Stack Web <span>|</span>
           </p>
         </div>
         <div className='Hero__button-container'>
