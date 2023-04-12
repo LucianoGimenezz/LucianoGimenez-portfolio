@@ -25,6 +25,8 @@ const App = () => {
     });
   }, []);
 
+  const getCurrentYear = () => new Date().getFullYear()
+
   return (
     <>
       <Header modal={modal} setOpenModal={setOpenModal} />
@@ -39,9 +41,19 @@ const App = () => {
             Front-end <span>|</span>
           </p>
         </div>
-        <a href="#contacto" className="Hero__button">
-          Contáctame!
-        </a>
+        <div className='Hero__button-container'>
+          <a href="#contacto" className="Hero__button">
+            Contáctame!
+          </a>
+          <a 
+            href='https://drive.google.com/file/d/1pWC1r-7Oq8F6qjoDk20XyOVZk79Ygn3e/view?usp=share_link' 
+            className="Hero__button Hero__button--download" 
+            download='CV.pdf'
+            target='_blank'
+            >
+            Descargar CV
+          </a>
+        </div>
       </section>
       <Aboutme />
       <Proyectos />
@@ -66,7 +78,7 @@ const App = () => {
           <span>
             <AiOutlineCopyrightCircle />
           </span>
-          <p>Luciano Gimenez 2023</p>
+          <p>Luciano Gimenez {getCurrentYear()}</p>
         </div>
       </footer>
     </>
