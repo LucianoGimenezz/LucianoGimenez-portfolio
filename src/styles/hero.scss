@@ -57,8 +57,24 @@
         z-index: 1;
         border: none;
         border-radius: 10px;
-        background-color: $buttonColor;
+        background-color: $secondaryColor;
+        color: $buttonColor;
         font-size: 1rem;
+    }
+    &__button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+    }
+    &__button--download {
+        border: 2px solid $secondaryColor;
+        background-color: transparent;
+        color: $buttonColor;
     }
 }
 
@@ -104,4 +120,13 @@ footer > div > span {
      .Hero > div > p {
         font-size: 3rem;
      }
+  }
+
+  @media (min-width: 800px) {
+    .Hero__button-container {
+        flex-direction: row;
+    } 
+    .Hero__button-container > a {
+        margin: 0;
+    }
   }
