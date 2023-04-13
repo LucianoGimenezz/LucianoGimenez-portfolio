@@ -1,24 +1,24 @@
-import React, { useRef, useState } from 'react';
-import '../styles/contacto.scss';
-import { AiOutlineCheckCircle } from 'react-icons/ai';
+import React, { useRef, useState } from 'react'
+import '../styles/contacto.scss'
+import { AiOutlineCheckCircle } from 'react-icons/ai'
 
 const Contacto = () => {
-  const form = useRef(null);
+  const form = useRef(null)
 
   const [state, setState] = useState({
     submitting: false,
     success: false,
     error: false
-  });
+  })
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form.current);
+    e.preventDefault()
+    const formData = new FormData(form.current)
 
     setState({
       ...state,
       submitting: true
-    });
+    })
 
     const response = await fetch('https://formspree.io/f/xayvgdze', {
       method: 'POST',
@@ -26,33 +26,33 @@ const Contacto = () => {
       headers: {
         Accept: 'application/json'
       }
-    });
+    })
     setState({
       ...state,
       submitting: false
-    });
+    })
 
     if (response.ok) {
       setState({
         ...state,
         success: true
-      });
+      })
 
-      form.current.reset();
+      form.current.reset()
       setTimeout(() => {
         setState({
           ...state,
           success: false
-        });
-      }, 2000);
+        })
+      }, 2000)
     } else {
       setState({
         ...state,
         error: true
-      });
-      form.current.reset();
+      })
+      form.current.reset()
     }
-  };
+  }
 
   return (
     <section id="contacto" className="Contacto">
@@ -120,7 +120,7 @@ const Contacto = () => {
         </div>
       </form>
     </section>
-  );
-};
+  )
+}
 
-export default Contacto;
+export default Contacto

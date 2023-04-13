@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
-import '../styles/proyectos.scss';
-import todoImg from '../assets/images/todoApp.png';
-import avatarProfile from '../assets/images/avatarProfile.png';
+import React, { useEffect, useRef } from 'react'
+import '../styles/proyectos.scss'
+import todoImg from '../assets/images/todoApp.png'
+import avatarProfile from '../assets/images/avatarProfile.png'
 
 const Proyectos = () => {
-  const modalStack = useRef(null);
-  const modalStackAP = useRef(null);
+  const modalStack = useRef(null)
+  const modalStackAP = useRef(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -13,21 +13,21 @@ const Proyectos = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              entry.target.childNodes[1].classList.add('Stackvisible');
-            }, 1000);
+              entry.target.childNodes[1].classList.add('Stackvisible')
+            }, 1000)
           } else {
-            entry.target.childNodes[1].classList.remove('Stackvisible');
+            entry.target.childNodes[1].classList.remove('Stackvisible')
           }
-        });
+        })
       },
       {
         threshold: 1
       }
-    );
+    )
 
-    observer.observe(modalStack.current);
-    observer.observe(modalStackAP.current);
-  }, []);
+    observer.observe(modalStack.current)
+    observer.observe(modalStackAP.current)
+  }, [])
 
   return (
     <section id="proyectos" className="Proyectos">
@@ -48,14 +48,14 @@ const Proyectos = () => {
             <a
               href="https://github.com/LucianoGimenezz/todo-app"
               target="_blank"
-              className="codigo"
+              className="codigo" rel="noreferrer"
             >
               Codigo
             </a>
             <a
               href="https://lucianogimenezz.github.io/todo-app/"
               target="_blank"
-              className="deploy"
+              className="deploy" rel="noreferrer"
             >
               Deploy
             </a>
@@ -82,14 +82,14 @@ const Proyectos = () => {
             <a
               href="https://github.com/LucianoGimenezz/Avatar-profile"
               target="_blank"
-              className="codigo"
+              className="codigo" rel="noreferrer"
             >
               Codigo
             </a>
             <a
               target="_blank"
               href="https://62b335da1b503e0c98a4971e--celebrated-moxie-0ce782.netlify.app/"
-              className="deploy"
+              className="deploy" rel="noreferrer"
             >
               Deploy
             </a>
@@ -112,7 +112,7 @@ const Proyectos = () => {
         </div> */}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Proyectos;
+export default Proyectos

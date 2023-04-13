@@ -1,6 +1,6 @@
-import React from 'react';
-import { BiMenu } from 'react-icons/bi';
-import '../styles/header.scss';
+import React from 'react'
+import { BiMenu } from 'react-icons/bi'
+import '../styles/header.scss'
 
 const Header = ({ modal, setOpenModal }) => {
   return (
@@ -30,7 +30,7 @@ const Header = ({ modal, setOpenModal }) => {
         </menu>
       </ul>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

@@ -1,34 +1,34 @@
-import React, { useEffect, useRef } from 'react';
-import { SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si';
-import { ImGit } from 'react-icons/im';
-import { TbBrandNextjs } from 'react-icons/tb';
-import img from '../assets/images/Maskgroup.png';
-import '../styles/aboutme.scss';
+import React, { useEffect, useRef } from 'react'
+import { SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si'
+import { ImGit } from 'react-icons/im'
+import { TbBrandNextjs } from 'react-icons/tb'
+import img from '../assets/images/Maskgroup.png'
+import '../styles/aboutme.scss'
 
 const Aboutme = () => {
-  const sectionInfo = useRef(null);
-  const sectionSkill = useRef(null);
+  const sectionInfo = useRef(null)
+  const sectionSkill = useRef(null)
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          document.querySelector('img').src = img;
+          entry.target.classList.add('visible')
+          document.querySelector('img').src = img
         } else {
-          entry.target.classList.remove('visible');
+          entry.target.classList.remove('visible')
         }
-      });
+      })
     },
     {
       threshold: 0.5
     }
-  );
+  )
 
   useEffect(() => {
-    observer.observe(sectionInfo.current);
-    observer.observe(sectionSkill.current);
-  }, []);
+    observer.observe(sectionInfo.current)
+    observer.observe(sectionSkill.current)
+  }, [])
 
   return (
     <section id="aboutme" className="Aboutme">
@@ -79,7 +79,7 @@ const Aboutme = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Aboutme;
+export default Aboutme

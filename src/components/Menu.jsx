@@ -1,7 +1,7 @@
-import React from 'react';
-import { createPortal } from 'react-dom';
-import '../styles/menuModal.scss';
-import { AiOutlineClose } from 'react-icons/ai';
+import React from 'react'
+import { createPortal } from 'react-dom'
+import '../styles/menuModal.scss'
+import { AiOutlineClose } from 'react-icons/ai'
 
 const Menu = ({ modal, setOpenModal }) => {
   return createPortal(
@@ -25,7 +25,7 @@ const Menu = ({ modal, setOpenModal }) => {
       </ul>
     </div>,
     document.getElementById('modal')
-  );
-};
+  )
+}
 
-export default Menu;
+export default Menu
