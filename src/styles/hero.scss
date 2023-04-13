@@ -69,7 +69,6 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: $secondaryColor;
 }
 
 footer > div {
@@ -80,10 +79,10 @@ footer > div {
 
 .socialmedia > span > a{
     font-size: 1.4rem;
-    color: #000;
+    color: $secondaryColor;
 }
 footer > div > span {
-    color: #000;
+    color: $secondaryColor;
     padding: 0px 4px;
 }
 
