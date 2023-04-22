@@ -1,2 +1,7 @@
 node_modules
 dist
+cypress/videos
+cypress/screenshots
+cypress/fixtures
+cypress/e2e/1-getting-started
+cypress/e2e/2-advanced-examples

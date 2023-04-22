@@ -5,6 +5,7 @@ import Contacto from './Contacto'
 import Header from './Header'
 import Menu from './Menu'
 import Proyectos from './Proyectos'
+import { URL_CV } from '../consts'
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -46,7 +47,7 @@ const App = () => {
             Contáctame!
           </a>
           <a
-            href='https://drive.google.com/file/d/1pWC1r-7Oq8F6qjoDk20XyOVZk79Ygn3e/view?usp=share_link'
+            href={URL_CV}
             className="Hero__button Hero__button--download"
             download='CV.pdf'
             target='_blank' rel="noreferrer"

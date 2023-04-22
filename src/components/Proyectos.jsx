@@ -29,12 +29,19 @@ const Proyectos = () => {
     observer.observe(modalStackAP.current)
   }, [])
 
+  const handleMouseOver = (_) => {
+    modalStack.current.classList.add('visible')
+  }
+
+  const handleMouseOut = (_) => {
+    modalStack.current.classList.remove('visible')
+  }
   return (
     <section id="proyectos" className="Proyectos">
       <h2>Proyectos</h2>
       <div className="Proyectos__container">
         <div className="Proyectos__items">
-          <div className="Proyectos__imagesContainer">
+          <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className="Proyectos__imagesContainer">
             <img src={todoImg} alt="Foto de la aplicacion de TODOS" />
             <div className="modal-stack" ref={modalStack}>
               <p>Stack</p>

@@ -91,7 +91,7 @@ const Contacto = () => {
         </div>
 
         <div className="item4">
-          <input type="text" required name="businessName" />
+          <input type="text" name="businessName" />
           <label>Nombre empresa</label>
         </div>
 
