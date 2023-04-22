@@ -2,7 +2,8 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
+    'cypress/globals': true
   },
   extends: ['plugin:react/recommended', 'standard'],
   parserOptions: {
@@ -12,7 +13,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: ['react', 'cypress'],
   rules: {
     'react/prop-types': 'off'
   }

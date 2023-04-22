@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack --mode production",
-    "lint": "npx eslint src"
+    "lint": "npx eslint src",
+    "cypress:open": "cypress open",
+    "test:e2e": "cypress run"
   },
   "keywords": [
     "react",
@@ -26,8 +28,10 @@
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "cypress": "^12.9.0",
     "eslint": "^8.19.0",
     "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-cypress": "^2.13.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-prettier": "^4.2.1",

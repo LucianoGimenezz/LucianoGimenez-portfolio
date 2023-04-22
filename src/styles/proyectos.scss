@@ -120,6 +120,10 @@
     }
 }
 
+.Proyectos__items .visible {
+    display: flex;
+}
+
 @keyframes downToUp {
     0%{
         height: 0;
